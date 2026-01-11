@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runelight Realms</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="panel" id="stats-panel">
+      <h3>Skills</h3>
+      <div id="skills"></div>
+      <button id="toggle-music">Music: On</button>
+    </div>
+    <div class="panel" id="quest-panel">
+      <h3>Quest Log</h3>
+      <ul id="quest-log"></ul>
+    </div>
+    <div class="panel" id="inventory-panel">
+      <h3>Inventory</h3>
+      <div id="inventory"></div>
+      <h4>Equipment</h4>
+      <div id="equipment"></div>
+    </div>
+    <div class="panel" id="bank-panel">
+      <h3>Bank (80)</h3>
+      <div id="bank"></div>
+    </div>
+  </div>
+
+  <div id="game-container">
+    <canvas id="game" width="1024" height="640"></canvas>
+    <canvas id="minimap" width="160" height="160"></canvas>
+  </div>
+
+  <div id="chat">
+    <div id="chat-log"></div>
+    <input id="chat-input" placeholder="Type /help for commands" />
+  </div>
+
+  <div id="dialogue" class="hidden">
+    <div class="dialogue-content">
+      <h3 id="dialogue-name"></h3>
+      <p id="dialogue-text"></p>
+      <div class="dialogue-actions">
+        <button id="dialogue-continue">Continue</button>
+        <button id="dialogue-close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="shop" class="hidden">
+    <div class="shop-content">
+      <h3>Trader's Wares</h3>
+      <div class="shop-tabs">
+        <button data-tab="buy" class="active">Buy</button>
+        <button data-tab="sell">Sell</button>
+      </div>
+      <div id="shop-items"></div>
+      <p id="shop-coins">Coins: 0</p>
+      <button id="shop-close">Close</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
